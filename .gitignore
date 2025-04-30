@@ -1,0 +1,25 @@
+# 仮想環境
+venv/
+
+# Pythonバイトコード
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 環境変数や秘密情報
+.env
+
+
+# VSCode用設定（使ってる場合）
+.vscode/
+
+# Flaskのinstanceフォルダ（セッションやDBファイルなど）
+instance/
+
+# SQLiteや一時ファイル（必要なら）
+*.sqlite3
+*.db
+
+# ログファイル
+*.log
