@@ -1,0 +1,117 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+
+<div class="app-container">
+    <!--コマンド一覧-->
+    <div class="sidebar">
+    <!--再度切り替えタブ-->
+        <div class="mb-2">
+            <button id="tab-left" class="btn btn-sm btn-outline-primary">LEFT</button>
+            <button id="tab-right" class="btn btn-sm btn-primary me-2">RIGHT</button>
+            
+        </div>
+
+        <div  class="command-area" id="commands-right">
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[F]フェイント">[F]フェイント</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[J]ジャブ">[J]ジャブ</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[S]ストレート">[S]ストレート</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[H]フック">[H]フック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[J] ジャブ">[J] ジャブ</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[S] ストレート">[S] ストレート</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[H] フック">[H] フック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[B] フック（ボディ）">[B] フック（ボディ）</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[U] アッパー">[U] アッパー</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[Q] バックブロー">[Q] バックブロー</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[E] 肘">[E] 肘</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[K] 膝">[K] 膝</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[1] ハイキック">[1] ハイキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[2] ミドルキック">[2] ミドルキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[3] ローキック">[3] ローキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[4] インロー">[4] インロー</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[5] カーフキック">[5] カーフキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[6] 前蹴り">[6] 前蹴り</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[7] 関節蹴り">[7] 関節蹴り</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[8] 三日月蹴り">[8] 三日月蹴り</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[9] バックスピンキック">[9] バックスピンキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[T] タックル">[T] タックル</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[C] クリンチ">[C] クリンチ</button>
+        </div>
+
+        <div class="command-area" id="commands-left" style="display: none;">
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[F]フェイント">[F]フェイント</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[J]ジャブ">[J]ジャブ</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[S]ストレート">[S]ストレート</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[H]フック">[H]フック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[J] ジャブ">[J] ジャブ</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[S] ストレート">[S] ストレート</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[H] フック">[H] フック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[B] フック（ボディ）">[B] フック（ボディ）</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[U] アッパー">[U] アッパー</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[Q] バックブロー">[Q] バックブロー</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[E] 肘">[E] 肘</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[K] 膝">[K] 膝</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[1] ハイキック">[1] ハイキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[2] ミドルキック">[2] ミドルキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[3] ローキック">[3] ローキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[4] インロー">[4] インロー</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[5] カーフキック">[5] カーフキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[6] 前蹴り">[6] 前蹴り</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[7] 関節蹴り">[7] 関節蹴り</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[8] 三日月蹴り">[8] 三日月蹴り</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[9] バックスピンキック">[9] バックスピンキック</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[T] タックル">[T] タックル</button>
+            <button class="btn btn-sm btn-light w-100 btn-command data-command" data-command="[C] クリンチ">[C] クリンチ</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!--動画再生-->
+        <div class="mt-2">
+            <input type="file" id="videoInput" accept="video/*" class="form-control mb-2 ">
+            <video id="videoPlayer" width="1000" controls>
+                おつかいのブラウザはvideoタグをサポートしていません。
+            </video>
+        </div>
+
+        <div class="mt-3">
+            <button id="saveLabelsBtn" class="btn btn-success mt-3">データを保存</button>
+        </div>
+
+        <!--タイムライン-->
+        <div id="timeline-container" class="mt-4 bg-blue p-3" style="height: 200px; position: relative; overflow: visible; padding-bottom: 16px;">
+            <h5 class="text-white">タイムライン（仮）</h5>
+
+            <!--タイムライン本体：この中にバーが収まる-->
+            <div id="timeline-track" style="position: relative; height: 100%;">
+
+                <!--選手Aライン-->
+                <div id="timeline-a" class="bg-primary bg-opacity-25 btn-command" style="
+                    position: relative;
+                    height: 80px;">
+                    <!--ラベルをここに追加していく-->
+                </div>
+
+                <!--選手Bライン-->
+                <div id="timeline-b" class="bg-danger bg-opacity-25 mt-1" style="
+                    position: relative;
+                    height: 80px;">
+                    <!--ラベルをここに追加していく-->
+                </div>
+
+                <!--再生バー-->
+                <div id="timeline-bar" style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 2px;
+                    height: 100%;
+                    background-color: #6FFFE9;
+                    ">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

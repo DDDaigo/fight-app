@@ -1,0 +1,65 @@
+
+.selected-timeline{
+    outline: 3px solid #6FFFE9;
+    outline-offset: -3px;
+
+}
+
+.label-right{
+    background-color: #5BC0BE;
+    color: white;
+}
+
+.label-left{
+    background-color: #6FFF8F;
+    color: white;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #1C2541;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #1C2541;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.command-area {
+    flex: 1;
+    overflow-y: auto;     /* ✅ ここがスクロールの要！ */
+    min-height: 0;         /* ✅ Flex内スクロールを可能にする必須指定 */
+    padding-right: 6px;    /* スクロールバーと重ならないように余白 */
+}
+
+.btn-command {
+    font-size: 12px;
+    padding: 4px 6px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-player {
+    flex: 0 0 auto;
+    margin-bottom: 16px;
+}
+
